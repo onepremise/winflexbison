@@ -219,8 +219,8 @@ int main (argc, argv)
      int argc;
      char   *argv[];
 {
-#if ENABLE_NLS
-#if HAVE_LOCALE_H
+#ifdef ENABLE_NLS
+#ifdef HAVE_LOCALE_H
 	setlocale (LC_MESSAGES, "");
         setlocale (LC_CTYPE, "");
 	textdomain (PACKAGE);
